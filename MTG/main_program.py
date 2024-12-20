@@ -36,7 +36,7 @@ def mainProgramLoop():
             [gui.Column([[gui.Button("Search Cards", size=(10, 1))]], justification="center")],
             [gui.Column([[gui.Button("Help", size=(10, 1))]], justification="center")],
             [gui.Column([[gui.Button("Exit", size=(10, 1))]], justification="center")],
-            [gui.Text("This program was created by:\n\tQuira Walker\nSpecial credit goes to:\n\tMissCthuleanCoder\nCredit also to:\nMembers of several Discord Servers &\nQuira's friends who have all helped in\nthe creation of this program.\n\nHad it not been for the help of these\namazing people this project never\nwould have been made psossible.\nA deep most sincere, Thank You.")]
+            [gui.Text("This program was created by:\n\tQuira Walker\nSpecial credit goes to:\n\tMissCthuleanCoder\nCredit also to:\nMembers of several Discord Servers &\nQuira's friends who have all helped in\nthe creation of this program.\n\nHad it not been for the help of these\namazing people this project never\nwould have been made possible.\nA deep most sincere, Thank You.")]
         ]
 
         file.run_check()
