@@ -26,6 +26,7 @@ This is written for both Linux and Windows file systems"""
 class Files():
     def __init__(self):
         self.catalogue = "mtg_card_catalogue.txt"
+        self.directory = f"{r"YOUR\FILE\PATH"}" if os.name == 'nt' else f"{os.path.expanduser('~')}/MTG/"
         self.directory = f"{os.path.expanduser('~')}\MTG" if os.name == 'nt' else f"{os.path.expanduser('~')}/MTG/"
         self.filepath = os.path.join(self.directory, self.catalogue)
 #Checks for the save folder and creates if does not exist yet

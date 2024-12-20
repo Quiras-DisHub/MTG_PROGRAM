@@ -22,8 +22,8 @@ This program has 2 primary functions as explained below:
     Special Credit Creator: MissCthuleanCoder
     Original Creation:      September-2024
     Released:               October-2024
-    Updated:                October-2024
-    Program Version:        2.1.0
+    Updated:                December-2024
+    Program Version:        2.1.1
     Program Code Language:  Python (3.9.2 32bit)
     Main Program File:      main_program.py
     Program Entry Point:    mainProgramLoop()
