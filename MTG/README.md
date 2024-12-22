@@ -23,7 +23,7 @@ This program has 2 primary functions as explained below:
     Original Creation:      September-2024
     Released:               October-2024
     Updated:                December-2024
-    Program Version:        2.1.1
+    Program Version:        2.2.1
     Program Code Language:  Python (3.9.2 32bit)
     Main Program File:      main_program.py
     Program Entry Point:    mainProgramLoop()
@@ -35,8 +35,9 @@ This program has 2 primary functions as explained below:
 
     Error: 1               Folder does not exist
     Error: 2               File does not exist
-    Error: 3               Error occured within Card Entry Function
-    Error: 4               Error occured within Card Search Function
-    Error: 5               No cards found during search
+    Error: 3               Save Error
+    Error: 4               Main Card Entry Function
+    Error: 5               Main Card Search Function
+    Error: 6               Empty search return
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

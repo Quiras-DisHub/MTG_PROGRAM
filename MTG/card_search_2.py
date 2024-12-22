@@ -16,7 +16,7 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 '''
 
-import PySimpleGUI as gui
+from settings import *
 from files import file
 
 """Still semi under refinement but functional, like card entry, this function uses the GUI results to
@@ -108,7 +108,7 @@ def cardSearch():
                         searchList.append(card['Name'])
 
             if searchList == []:
-                error5 = gui.popup_no_buttons("No Cards Found", title="Error: 5", auto_close=True, auto_close_duration=3)
+                error.display_error(6)
                 window.close()
                 del window
                 break

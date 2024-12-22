@@ -16,8 +16,7 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 '''
 
-import os
-import PySimpleGUI as gui
+from settings import *
 from files import file
 
 """This is the card search function that reads the results of the GUI window and saves
@@ -171,7 +170,7 @@ def cardEntry():
                     break
                 elif verify == "No":
                     window.close()
-                    verify = gui.popup_no_buttons("Please re-enter your card", title="Verification Failed", auto_close=True, auto_close_duration=2)
+                    verify = gui.popup_no_buttons("Please re-enter your card", title="Verify Failed", auto_close=True, auto_close_duration=2)
                     del window
                     break
                 elif verify == gui.WINDOW_CLOSED:

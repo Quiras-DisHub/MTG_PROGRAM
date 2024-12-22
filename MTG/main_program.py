@@ -15,32 +15,24 @@
     You should have received a copy of the GNU Affero General Public License
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 '''
-
-try:
-    import PySimpleGUI as gui
-    gui.theme("DarkPurple1")
-except:
-    ImportError
-    print("Run `python3 -m pip install pysimplegui` & try again.")
-    
+from settings import *    
 from files import file
 from card_entry import cardEntry
 from card_search_2 import cardSearch
 
 def mainProgramLoop():
     while True:
+#Perform containing folder & saving file check before proceeding
+        file.run_check()
 #Main Menu Screen
         mainMenu = [
             [gui.Text("This is the MTG Card Collector!")],
-            [gui.Column([[gui.Button("Card Entry", size=(10, 1))]], justification="center")],
+            [gui.Column([[gui.Button("Card Entry",   size=(10, 1))]], justification="center")],
             [gui.Column([[gui.Button("Search Cards", size=(10, 1))]], justification="center")],
-            [gui.Column([[gui.Button("Help", size=(10, 1))]], justification="center")],
-            [gui.Column([[gui.Button("Exit", size=(10, 1))]], justification="center")],
+            [gui.Column([[gui.Button("Help",         size=(10, 1))]], justification="center")],
+            [gui.Column([[gui.Button("Exit",         size=(10, 1))]], justification="center")],
             [gui.Text("This program was created by:\n\tQuira Walker\nSpecial credit goes to:\n\tMissCthuleanCoder\nCredit also to:\n\tMembers of several Discord Servers &\n\tQuira's friends who have all helped in\n\tthe creation of this program.\n\nHad it not been for the help of these amazing people,\nthis project never would have been made possible.\nA deep most sincere, Thank You.")]
         ]
-
-        file.run_check()
-
         menu = gui.Window("Welcome", mainMenu)
         menuEvent, menuValues = menu.read()
 #Card Entry Button / Error
@@ -50,7 +42,7 @@ def mainProgramLoop():
             try:
                 cardEntry()
             except:
-                error3 = gui.popup_ok("There seems to be an error running this function, please try again. If the issue persists please make note of the error code and contact the creator.", title="Error: 3")
+                error.display_error(4)
 #Card Search Button / Error
         if menuEvent == "Search Cards":
             menu.close()
@@ -58,7 +50,7 @@ def mainProgramLoop():
             try:
                 cardSearch()
             except:
-                error4 = gui.popup_ok("There seems to be an error running this function, please try again. If the issue persists please make note of the error code and contact the creator.", title="Error: 4")
+                error.display_error(5)
 #Help Button
         if menuEvent == "Help":
             menu.close()
