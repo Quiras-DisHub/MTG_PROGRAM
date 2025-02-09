@@ -20,6 +20,10 @@ try:
     import PySimpleGUI as gui
 except ImportError:
     print("Run `python3 -m pip install pysimplegui` & try again.")
+from files import file
+from card_entry import cardEntry
+from card_search_2 import cardSearch
+
 
 #GUI Settings
 gui.theme('DarkBrown2') #See the GUI_THEME.png file if you wish to use a different GUI

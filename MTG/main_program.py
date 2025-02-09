@@ -15,10 +15,8 @@
     You should have received a copy of the GNU Affero General Public License
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 '''
-from settings import *    
-from files import file
-from card_entry import cardEntry
-from card_search_2 import cardSearch
+
+from settings import *
 
 def mainProgramLoop():
     while True:
