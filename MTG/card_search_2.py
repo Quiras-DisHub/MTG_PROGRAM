@@ -17,6 +17,7 @@
 '''
 
 from settings import *
+from files import file
 
 """Still semi under refinement but functional, like card entry, this function uses the GUI results to
 search through the save file for cards that match ans displays the data back in a scrollable window.

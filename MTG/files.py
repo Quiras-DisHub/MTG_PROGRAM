@@ -21,7 +21,7 @@ from settings import *
 class Files():
     def __init__(self):
         self.catalogue = "mtg_card_catalogue.txt"
-        self.directory = "/home/one-to-rule-them-all/VIRTUAL/Code_File/MTG_PROGRAM/MTG"
+        self.directory = "/home/one-to-rule-them-all/VIRTUAL/Code_File/MTG_PROGRAM/Card_Data"
         self.filepath = os.path.join(self.directory, self.catalogue)
 #Checks for the save folder and creates it if it does not exist yet
     def check_for_folder(self):

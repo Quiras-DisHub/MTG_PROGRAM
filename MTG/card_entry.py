@@ -17,6 +17,7 @@
 '''
 
 from settings import *
+from files import file
 
 """This is the card search function that reads the results of the GUI window and saves
 the subsequntly made dictionary for each card. If it detects a duplicate card the
