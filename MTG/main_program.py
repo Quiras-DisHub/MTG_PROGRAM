@@ -17,7 +17,6 @@
 '''
 
 from settings import *
-from files import file
 from card_entry import cardEntry
 from card_search_2 import cardSearch
 

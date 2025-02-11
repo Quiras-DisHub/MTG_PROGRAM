@@ -25,7 +25,39 @@ except ImportError:
 #GUI Settings
 gui.theme('DarkBrown2') #See the GUI_THEME.png file if you wish to use a different GUI
 
-#Errors
+"""This class holds the main file functions required throughout the program from verifying folder/file precence to saving data it is all handled by these functions."""
+class Files():
+    def __init__(self):
+        self.catalogue = "mtg_card_catalogue.txt"
+        self.directory = "/home/one-to-rule-them-all/VIRTUAL/Code_File/MTG_PROGRAM/Card_Data"
+        self.filepath = os.path.join(self.directory, self.catalogue)
+# Checks for the save folder and creates it if it does not exist yet
+    def check_for_folder(self):
+        if not os.path.exists(self.directory):
+            error.display_error(1, True)
+            os.makedirs(self.directory)
+# Checks for the save file and creates it if it does not exist in the above folder
+    def check_for_file(self):
+        if not os.path.exists(self.filepath):
+            error.display_error(2, True)
+            open(self.filepath, 'w').close()
+# Saves your cards as they are entered allowing for later recall in the search and future functions
+    def save_file(self, data):
+        try:
+            with open(self.filepath, 'a') as database:
+                database.write(str(data) + "\n")
+                database.close()
+        except:
+            error.display_error(3)
+# Runs a Folder and File Check sequence
+    def run_check(self):
+        file.check_for_folder()
+        time.sleep(0.125)
+        file.check_for_file()
+        time.sleep(0.125)
+file = Files()
+
+# Handles Error messages that may be needed from time to time.
 class Errors:
     def __init__(self):
         self.errorPersists      = "If this issue persists please make note of the error code found in the title bar and contact the creator."
